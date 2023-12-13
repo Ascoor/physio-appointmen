@@ -1,14 +1,16 @@
-// App.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.rtl.min.css';
-import NavbarComponent from './componnets/Layouts/NavbarComponent';
-import GuestLanding from './componnets/GuestLanding';
-import {  Container} from  'react-bootstrap';
+import NavbarComponent from './components/Layouts/NavbarComponent';
+import GuestLanding from './components/GuestLanding';
+import FooterComponent from './components/FooterComponent';
+import { Container } from 'react-bootstrap';
+
 const App = () => {
   return (
     <Container>
       <NavbarComponent />
       <GuestLanding />
+      <FooterComponent />
     </Container>
   );
 };

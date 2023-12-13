@@ -1,10 +1,8 @@
 import React from 'react';
 import '../assets/css/GuestLanding.css';
-import {Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
 const GuestLanding = () => {
-
-
   return (
     <div className="splash-container">
       {/* Splash Mask */}
@@ -13,11 +11,11 @@ const GuestLanding = () => {
       <div
         className="d-flex flex-column justify-content-center align-items-center"
         style={{
-          paddingLeft: '10px',
+          padding: '10px',
           height: 'calc(100% - 64px)', // Adjusted to exclude navbar height
         }}
       >
-      
+        {/* Your landing page content goes here */}
       </div>
 
       <footer
