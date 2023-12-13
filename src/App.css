@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+/* NavbarComponent.css */
+:root {
+  --primary-color: #3b41e3; /* Adjust your color scheme here */
+  --secondary-color: #3202d1;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+}
+
+.nav-link {
+  color: white;
+  &:hover {
+    color: var(--secondary-color);
+  }
+}
