@@ -8,13 +8,6 @@
   z-index: -1;
 }
 
-@media (max-width: 768px) {
-  .splash-mask {
-    /* Adjust the styling for smaller screens */
-    height: calc(130vh - 64px);
-  }
-}
-
 @media (max-width: 576px) {
   .splash-mask {
     /* Further adjustments for even smaller screens */

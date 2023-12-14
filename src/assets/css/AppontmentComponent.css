@@ -12,7 +12,7 @@
   position: relative;
   padding-right: 30px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Align to end on larger screens */
   align-items: center;
   min-height: calc(100vh - 64px); /* Full viewport height minus header height */
 }
@@ -26,6 +26,14 @@
   padding: 40px;
   width: 100%; /* Take full width */
   max-width: 400px; /* Limit maximum width */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .splash-container {
+    justify-content: center; /* Center content on medium and smaller devices */
+    padding-right: 0; /* Remove right padding */
+  }
 }
 
 /* Center the form elements */
