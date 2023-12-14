@@ -12,9 +12,9 @@
   background: rgba(15, 63, 134, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 10px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 6px 4px rgba(0, 0, 0, 0.2);
   z-index: 2;
-  padding: 20px;
+  padding: 40px;
   width: 100%; /* Take full width */
   max-width: 400px; /* Limit maximum width */
 }
@@ -47,12 +47,14 @@
 @media (max-width: 768px) {
   .splash-container {
     justify-content: center;
+    padding-right: 30px;
   }
 }
 
 @media (max-width: 576px) {
   .splash-container {
     min-height: calc(100vh - 50px); /* Adjust for smaller header height */
+    padding-right: 30px;
   }
   
   .glass-card {
@@ -61,14 +63,14 @@
   
   /* Decrease font size for smaller screens */
   .welcome-text-center {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 
 /* Enhance white text shadow */
 .glass-card {
   color: aliceblue;
-  text-shadow: 2px 4px 4px rgba(73, 3, 3, 0.5); /* Add white text shadow */
+  text-shadow: 4px 7px 4px rgba(0, 41, 82, 0.5); /* Add white text shadow */
 }
 
 /* Bold text */
@@ -76,9 +78,12 @@
   font-weight: bold;
 }
 
-/* Arabic font */
-@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap'); /* Import Amiri font */
-
 .glass-card {
-  font-family: 'Amiri', serif; /* Apply Amiri font */
+  font-family: 'MyCustomFont';
+}
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../fonts/VIP Rawy Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
 }

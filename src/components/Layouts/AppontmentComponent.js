@@ -11,11 +11,14 @@ const AppontmentComponent = () => {
     const gender = document.getElementById("gender").value;
     const service = document.getElementById("service").value;
     const datetime = document.getElementById("datetime").value;
-
-    // Construct the WhatsApp message
-    const message = `الاسم: ${name}%0Aرقم الهاتف: ${phone}%0Aالجنس: ${
-      gender === "male" ? "ذكر" : "أنثى"
-    }%0Aالخدمة: ${service}%0Aتاريخ ووقت الموعد: ${datetime}`;
+// Construct the WhatsApp message with line breaks
+const message = `الاسم: ${name}
+رقم الهاتف: ${phone},
+الجنس: ${
+  gender === "male" ? "ذكر" : "أنثى"
+},
+الخدمة: ${service},
+تاريخ ووقت الموعد: ${datetime}`;
 
     // Create the WhatsApp link
     const whatsappLink = `https://wa.me/201555589966/?text=${encodeURIComponent(
@@ -33,7 +36,7 @@ const AppontmentComponent = () => {
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
-            الاسم:
+            الاسم
           </label>
           <input
             type="text"
@@ -45,7 +48,7 @@ const AppontmentComponent = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="phone" className="form-label">
-            رقم الهاتف:
+            رقم الهاتف
           </label>
           <input
             type="tel"
@@ -58,16 +61,17 @@ const AppontmentComponent = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="gender" className="form-label">
-            الجنس:
+            الجنس
           </label>
           <select className="form-select" id="gender">
+            <option value="">إختر</option>
             <option value="male">ذكر</option>
             <option value="female">أنثى</option>
           </select>
         </div>
         <div className="mb-3">
           <label htmlFor="service" className="form-label">
-            الخدمة:
+            الخدمة
           </label>
           <select className="form-select" id="service">
             <option value="">إختر</option>
@@ -77,14 +81,14 @@ const AppontmentComponent = () => {
         </div>
         <div className="mb-3">
           <label htmlFor="datetime" className="form-label">
-            تاريخ ووقت الموعد:
+            تاريخ ووقت الموعد
           </label>
           <input
             type="datetime-local"
             className="form-control"
             id="datetime"
             min="2023-01-01T10:00"
-            max="2023-12-31T21:00"
+            max="2030-12-31T21:00"
             required
           />
         </div>

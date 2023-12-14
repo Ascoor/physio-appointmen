@@ -3,10 +3,10 @@ import '../assets/css/GuestLanding.css';
 import NavbarComponent from '../components/Layouts/NavbarComponent';
 import FooterComponent from './Layouts/FooterComponent';
 import AppontmentComponent from './Layouts/AppontmentComponent';
-import Home from './Sections/Home';
-import Services from './Sections/Services';
-import About from './Sections/About';
-import Contact from './Sections/Contact';
+// import Home from './Sections/Home';
+// import Services from './Sections/Services';
+// import About from './Sections/About';
+// import Contact from './Sections/Contact';
 
 const GuestLanding = () => {
   const [activeSection, setActiveSection] = useState('appointment');
@@ -19,12 +19,10 @@ const GuestLanding = () => {
         setActiveSection('services');
       } else if (path.includes('about')) {
         setActiveSection('about');
-      } else if (path.includes('appointment')) {
-        setActiveSection('appointment');
       } else if (path.includes('contact')) {
         setActiveSection('contact');
       } else {
-        setActiveSection('home');
+        setActiveSection('appointment');
       }
     };
 
@@ -44,11 +42,11 @@ const GuestLanding = () => {
       <div className="splash-mask">
         <div className="splash-container">
           <div className="content-container d-flex flex-column justify-content-center align-items-center">
-            {activeSection === 'home' && <Home />}
             {activeSection === 'appointment' && <AppontmentComponent />}
+            {/* {activeSection === 'home' && <Home />}
             {activeSection === 'services' && <Services />}
             {activeSection === 'about' && <About />}
-            {activeSection === 'contact' && <Contact />}
+            {activeSection === 'contact' && <Contact />} */}
           </div>
         </div>
       </div>

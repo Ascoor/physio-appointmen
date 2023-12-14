@@ -8,7 +8,7 @@ const FooterComponent = () => {
     <footer className="landing-footer">
       <Container>
         <p style={{ margin: 0 }}>
-          &copy; {new Date().getFullYear()} Avocat All rights reserved
+          &copy; {new Date().getFullYear()} Physio Appointment System. All rights reserved
         </p>
       </Container>
     </footer>
