@@ -1,3 +1,12 @@
+/* Define breakpoints as CSS variables */
+:root {
+  --breakpoint-xs: 320px; /* Extra small devices (phones) */
+  --breakpoint-sm: 576px; /* Small devices (large phones, small tablets) */
+  --breakpoint-md: 768px; /* Medium devices (tablets) */
+  --breakpoint-lg: 992px; /* Large devices (desktops) */
+  --breakpoint-xl: 1200px; /* Extra large devices (large desktops) */
+}
+
 /* Base styling for the splash-container and content-container */
 .splash-container {
   position: relative;
@@ -43,30 +52,6 @@
   font-size: 24px;
 }
 
-/* Add responsive CSS here */
-@media (max-width: 768px) {
-  .splash-container {
-    justify-content: center;
-    padding-right: 30px;
-  }
-}
-
-@media (max-width: 576px) {
-  .splash-container {
-    min-height: calc(100vh - 50px); /* Adjust for smaller header height */
-    padding-right: 30px;
-  }
-  
-  .glass-card {
-    padding: 10px; /* Decrease padding for smaller screens */
-  }
-  
-  /* Decrease font size for smaller screens */
-  .welcome-text-center {
-    font-size: 30px;
-  }
-}
-
 /* Enhance white text shadow */
 .glass-card {
   color: aliceblue;
@@ -81,9 +66,41 @@
 .glass-card {
   font-family: 'MyCustomFont';
 }
+
 @font-face {
   font-family: 'MyCustomFont';
   src: url('../fonts/VIP Rawy Regular.otf') format('otf');
   font-weight: normal;
   font-style: normal;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: var(--breakpoint-md)) {
+  .splash-container {
+    justify-content: center;
+    padding-right: 0;
+  }
+
+  .content-container {
+    padding: 20px;
+    max-width: 90%; /* Adjust width for medium devices */
+  }
+
+  .form-control {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .welcome-text-center {
+    font-size: 20px; /* Smaller font size on medium devices */
+  }
+}
+
+@media (max-width: var(--breakpoint-sm)) {
+  .splash-container {
+    min-height: calc(100vh - 50px); /* Adjust for smaller header height */
+  }
+
+  .glass-card {
+    padding: 10px; /* Decrease padding for smaller screens */
+  }
 }
