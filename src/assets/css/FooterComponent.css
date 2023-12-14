@@ -1,0 +1,10 @@
+
+.landing-footer {
+    background: linear-gradient(35deg, rgb(1, 20, 61), #5c1c1c, rgb(1, 29, 54));
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }

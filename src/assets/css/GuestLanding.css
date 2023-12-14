@@ -1,32 +1,30 @@
-/* GuestLanding.css */
+.splash-mask {
+  position: absolute;
+  width: 100%;
+  height: calc(150vh - 64px); /* Adjust as needed */
+  top: 64px; /* Adjust as needed */
+  background: url('../images/landing.jpeg') center top/cover no-repeat;
+  opacity: 0.9;
+  z-index: -1;
+}
 
-.splash-container {
-    opacity: 1;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(circle at center, #0b2440 0%, #1a466b 50%, #0a2b41 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    z-index: 1;
-  }
-  
+@media (max-width: 768px) {
   .splash-mask {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    /* Your pattern image */
-    background-image: url('../../../public/landing.jpeg');
-    opacity: 0.9;
-    z-index: -2;
-    pointer-events: none;
-    /* Optional blur effect */
-    backdrop-filter: blur(15px);
+    /* Adjust the styling for smaller screens */
+    height: calc(130vh - 64px);
   }
-  
+}
+
+@media (max-width: 576px) {
+  .splash-mask {
+    /* Further adjustments for even smaller screens */
+    height: calc(100vh - 64px);
+  }
+}
+/* Example styles */
+#home, #services, #about, #contact {
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}

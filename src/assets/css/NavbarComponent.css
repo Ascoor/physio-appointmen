@@ -1,0 +1,64 @@
+.glass-navbar {
+  position: fixed; /* Fixed position to stay on top */
+  width: 100%; /* Full width */
+  /* backdrop-filter: blur(40px); Blur effect for the glass effect */
+  background-color: rgb(0, 31, 66); /* Semi-transparent white */
+  border-bottom: 2px solid rgb(139, 17, 17);
+  box-shadow: 0 8px 6px rgb(4, 60, 164);
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar {
+  padding: 0.5rem 1rem; /* Adjust padding if needed */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #343a40;
+  transition: left 0.3s;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar a {
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
+.sidebar-toggle {
+  display: none;
+  color: white;
+  background: transparent;
+  border: none;
+}
+.nav-link.active {
+  color: #ffd700; /* Active link color */
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .sidebar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    display: none;
+  }
+}
