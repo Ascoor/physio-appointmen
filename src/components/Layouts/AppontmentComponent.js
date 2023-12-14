@@ -63,20 +63,20 @@ const message = `الاسم: ${name}
           <label htmlFor="gender" className="form-label">
             الجنس
           </label>
-          <select className="form-select" id="gender">
+          <select className="form-select" id="gender" required>
             <option value="">إختر</option>
-            <option value="male">ذكر</option>
-            <option value="female">أنثى</option>
+            <option value="ذكر">ذكر</option>
+            <option value="أنثى">أنثى</option>
           </select>
         </div>
         <div className="mb-3">
           <label htmlFor="service" className="form-label">
             الخدمة
           </label>
-          <select className="form-select" id="service">
+          <select className="form-select" id="service" required>
             <option value="">إختر</option>
-            <option value="consultation">إستشارة</option>
-            <option value="treatment">جلسة علاج طبيعي</option>
+            <option value="إستشارة">إستشارة</option>
+            <option value="جلسة علاج طبيعي">جلسة علاج طبيعي</option>
           </select>
         </div>
         <div className="mb-3">
